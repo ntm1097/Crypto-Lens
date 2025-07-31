@@ -45,6 +45,7 @@ const Pricing = () => {
         setCoins(response.data || []);
         sessionStorage.setItem("coins", JSON.stringify(response.data || []));
         setError(false);
+        setLoading(false);
       } catch (err) {
         setError(true);
         setCoins([]);
