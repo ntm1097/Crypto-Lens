@@ -1,13 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from "../Assets/icons8-coin-64.png";
 import { Link } from 'react-router-dom';
 
 const PricingNav = ({ onShowTop10 }) => {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleLogoClick = () => {
+    setIsClicked(true);
+    // Reset the scale after a short delay
+    setTimeout(() => {
+      setIsClicked(false);
+    }, 300);
+  };
+
   return (
     <div className="nav__container">
       <nav>
         <Link to="/">
-          <figure className="logo">
+          <figure className='logo' >
             <span className="website__name">CryptoLen</span>
             <img src={logo} className="logo__img" alt="" />
           </figure>

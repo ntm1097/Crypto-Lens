@@ -67,18 +67,19 @@ a {
 NAVIGATION 
 
 
-*/ 
+*/
 
-
-.logo {
+.logo { 
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 800ms ease;
 }
 
 .logo:hover {
     cursor: pointer;
 }
+
 
 .website__name {
     margin-right: -4px;
@@ -141,11 +142,8 @@ nav {
     font-size: 18px;
 }
 
-.link__primary:hover .btn {
-    background-color: #0e87cd;
-}
-
 .btn:hover {
+    background-color: #0e87cd;
     transform: scale(1.02);
 }
 
@@ -211,7 +209,7 @@ SEARCH SECTION
 
 .falling-coin {
   position: absolute;
-  top: -70px;
+  top: -80px;
   animation: coin-fall 1.5s cubic-bezier(0.4,0.7,0.6,1) forwards;
   opacity: 0.85;
   pointer-events: none;
@@ -236,10 +234,6 @@ SEARCH SECTION
 .search__description {
     font-size: 28px;
     margin: 24px;
-}
-
-.pricing-page .search__bar {
-;
 }
 
 .search__bar {
@@ -318,6 +312,7 @@ SEARCH SECTION
     font-size: 18px;
     margin: 8px;
     color: #054f79;
+    cursor: pointer;
 }
 
 .currency__img {
@@ -337,10 +332,6 @@ COIN PROJECTS
 
 .coin__info-skeleton {
     padding: 60px;
-}
-
-.coin__row-sl {
-    
 }
 
 .error-message {

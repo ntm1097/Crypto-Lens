@@ -19,6 +19,14 @@ const Pricing = () => {
   const [showTop10, setShowTop10] = useState(false);
 
   const query = useQuery();
+  const location = useLocation();
+
+  // Check if we should show top 10 from navigation state
+  useEffect(() => {
+    if (location.state?.showTop10) {
+      setShowTop10(true);
+    }
+  }, [location.state]);
 
 
   useEffect(() => {

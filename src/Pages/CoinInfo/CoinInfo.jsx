@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useParams, useNavigate } from "react-router-dom";
 import PricingNav from "../../Componenets/PricingNav";
 import "./CoinInfo.css";
 
@@ -7,11 +7,16 @@ const CoinInfo = () => {
   const { state } = useLocation();
   const { coin } = state || {};
   const { id } = useParams();
+  const navigate = useNavigate();
+
+  const handleShowTop10 = () => {
+    navigate('/pricing', { state: { showTop10: true } });
+  };
 
   if (!coin) {
     return (
       <>
-        <PricingNav />
+        <PricingNav onShowTop10={handleShowTop10} />
         <div className="coin__info-container">
           <div className="coin__info-row">No coin data found for "{id}".</div>
         </div>
@@ -21,7 +26,7 @@ const CoinInfo = () => {
 
   return (
     <>
-      <PricingNav />
+      <PricingNav onShowTop10={handleShowTop10} />
       <div className="coin__info-container">
         <div className="coin__info-row">
           <figure>

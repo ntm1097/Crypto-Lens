@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import MainNav from "../Componenets/MainNav";
 import Main from "../Componenets/Main";
 import logo from "../Assets/icons8-coin-64.png";
+import Bitcoin from "../Assets/bitcoin.png";
 
 const NUM_COINS = 20;
 
@@ -10,7 +11,7 @@ const LandingPage = () => {
 
   const handleLogoClick = () => {
     setShowLogoAnim(true);
-    setTimeout(() => setShowLogoAnim(false), 1800); // Animation lasts 1.8s
+    setTimeout(() => setShowLogoAnim(false), 2500); // Animation lasts 1.8s
   };
 
   return (
@@ -26,7 +27,7 @@ const LandingPage = () => {
             return (
               <img
                 key={i}
-                src={logo}
+                src={Bitcoin}
                 alt="coin"
                 className="falling-coin"
                 style={{
