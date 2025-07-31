@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+:root {
+  --primary-color: #054f79;
+}
+
+
+.highlight {
+    color:  #da5534;
+}
+
+.coin__info-container {
+    padding-top: 100px;
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.coin__info-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.coins {
+    width: 100%;
+    height: 100%;
+    max-width: 150px;
+
+}
+
+.info__coin {
+    margin-top: 36px;
+    width: 100%;
+    border: solid 2px var(--primary-color);
+    border-radius: 25px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coin__title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.coin__data p {
+    display: flex;
+    padding: 8px;
+    justify-content: space-between;
+    gap: 36px;
+}
